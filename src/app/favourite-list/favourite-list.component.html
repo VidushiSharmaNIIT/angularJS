@@ -1,0 +1,17 @@
+<a [routerLink]="'/search'"> Search Movies</a> -->
+<div class="row">
+  <div class="col-md-6 col-lg-3" *ngIf="data">
+    <div *ngFor="let item of data">
+      <div class="card carddecorator">
+        <a>
+          <div class="card-block">
+            <img class="card-img-top img-fluid" src="https://image.tmdb.org/t/p/w500{{item.poster_path}}">
+            <p class="card-title">Movie: {{item.title}}</p>
+            <p class="card-text">Release Date: {{item.release_date}}</p>
+             <button (click)="deleted(id)">Delete</button>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
