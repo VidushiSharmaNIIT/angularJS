@@ -17,19 +17,20 @@ data: any=[];
   this.data=movieData;
   	
   })}
-  del(detail:any){
-this.favourite={
-  "poster_path":detail.poster_path,
-    "title":detail.title,
-    "release_date":detail.release_date
-}
-this.MovieService
-.delete(this.favourite)
-.subscribe((data)=>
-  console.log(data))
+  delFavo(id:any){
+    this.MovieService.delFav(id)
+          .subscribe((data)=>{
+            console.log("successfully deleted")
+})
 
   }
+EditFavo(id:any){
+    this.MovieService.EditFav(id)
+          .subscribe((data)=>{
+            console.log("successfully updated")
+})
 
+  }
 
 
 }

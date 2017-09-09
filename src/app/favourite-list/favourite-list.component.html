@@ -1,6 +1,24 @@
-<a [routerLink]="'/search'"> Search Movies</a> -->
-<div class="row">
-  <div class="col-md-6 col-lg-3" *ngIf="data">
+<nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse">
+  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <a class="navbar-brand" href="#">MovieApp</a>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="'/search'">Search Movies</a>
+      </li>
+      </ul>    
+  </div>
+</nav>
+
+
+
+<!-- <!-- <div class="row">
+  <div class="col-md-6 col-lg-3" >
     <div *ngFor="let item of data">
       <div class="card carddecorator">
         <a>
@@ -8,10 +26,26 @@
             <img class="card-img-top img-fluid" src="https://image.tmdb.org/t/p/w500{{item.poster_path}}">
             <p class="card-title">Movie: {{item.title}}</p>
             <p class="card-text">Release Date: {{item.release_date}}</p>
-             <button (click)="deleted(id)">Delete</button>
+             <button (click)="delFavo(item._id)">Delete</button>
+             <button (click)="EditFavo(item._id)">Edit</button>
           </div>
         </a>
       </div>
+    </div>
+  </div>
+</div> -->
+<div class="row">
+  <div class="col-md-6 col-lg-3" *ngFor="let item of data">
+    <div class="card carddecorator">
+      <a> 
+             <img class="card-img-top img-fluid" src="https://image.tmdb.org/t/p/w500{item.poster_path}}">
+             <div class="card-block">
+               <p class="card-title">Movie: {{item.title}}</p>
+               <p class="card-text">Release Date: {item.release_date}}</p>
+               <button (click)="delFavo(item._id)">Delete</button>
+             <button (click)="EditFavo(item._id)">Edit</button>
+             </div>
+      </a>
     </div>
   </div>
 </div>

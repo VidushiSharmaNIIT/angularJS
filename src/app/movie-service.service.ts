@@ -11,9 +11,10 @@ private movieUrl = "http://api.themoviedb.org/3/search/movie?api_key=c8c9a862bfc
   	return this.http
   	.get(this.movieUrl+movie)
   	.map((res)=>res.json());
+       
 
   }
-
+  
 add(fav){
 	//console.log(fav);
 	return this.http
@@ -26,9 +27,14 @@ showMovieDetails(){
 	.get('http://localhost:3000/users')
 	.map(res=>res.json())
 }
-delete(fav:any){
-  return this.http
-  .delete('http://localhost:3000/user/'+fav)
-  .map(res=>res.json())
+delFav(id:any){
+    return this.http
+            .delete('http://localhost:3000/user/'+id)
+            .map(res=>res.json());
+}
+EditFav(id:any){
+    return this.http
+            .delete('http://localhost:3000/user/'+id)
+            .map(res=>res.json());
 }
 }
