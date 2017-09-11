@@ -14,6 +14,14 @@ data: any=[];
 
   ngOnInit() {
 
+     return this.MovieService.getOnlineMovies('batman')
+ .subscribe((res)=>{
+  this.movies=res.results;
+this.movieList.emit(this.movies)
+console.log(this.movies)
+})
+
+
   }
   
 searchMovie(movie:string):any{

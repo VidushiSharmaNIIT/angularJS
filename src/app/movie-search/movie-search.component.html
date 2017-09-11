@@ -1,4 +1,4 @@
-<nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse">
+<nav class="navbar fixed-top navbar-toggleable-md navbar-inverse bg-inverse">
   <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -10,9 +10,11 @@
       </li>
     </ul>
     <form class="form-inline my-2 my-lg-0">
-      <input type="text" name="movie" [(ngModel)]='movie'>
-      <button (click)="searchMovie(movie)">search</button>
-      <button type="button" [routerLink]="'/fav-movies'" class="btn btn-success">Favourite</button>
+    
+     <input class="form-control mr-sm-2" type="text" placeholder="Search" name="movie" [(ngModel)]='movie'>
+     
+      <button type="button" class="btn btn-success" (click)="searchMovie(movie)" >Search</button>
+      <button type="button" class="btn btn-primary" [routerLink]="'/fav-movies'" >Favourite</button>
     </form>
   </div>
 </nav>

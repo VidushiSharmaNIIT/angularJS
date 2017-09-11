@@ -1,3 +1,4 @@
+<div class="container-fluid">
 <nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse">
   <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -17,35 +18,65 @@
 
 
 
-<!-- <!-- <div class="row">
-  <div class="col-md-6 col-lg-3" >
-    <div *ngFor="let item of data">
-      <div class="card carddecorator">
-        <a>
-          <div class="card-block">
-            <img class="card-img-top img-fluid" src="https://image.tmdb.org/t/p/w500{{item.poster_path}}">
-            <p class="card-title">Movie: {{item.title}}</p>
-            <p class="card-text">Release Date: {{item.release_date}}</p>
-             <button (click)="delFavo(item._id)">Delete</button>
-             <button (click)="EditFavo(item._id)">Edit</button>
-          </div>
-        </a>
-      </div>
-    </div>
-  </div>
-</div> -->
 <div class="row">
-  <div class="col-md-6 col-lg-3" *ngFor="let item of data">
+  <div class="col-md-6 col-lg-3" *ngFor="let movie of data">
     <div class="card carddecorator">
       <a> 
-             <img class="card-img-top img-fluid" src="https://image.tmdb.org/t/p/w500{item.poster_path}}">
-             <div class="card-block">
-               <p class="card-title">Movie: {{item.title}}</p>
-               <p class="card-text">Release Date: {item.release_date}}</p>
-               <button (click)="delFavo(item._id)">Delete</button>
-             <button (click)="EditFavo(item._id)">Edit</button>
+             <img class="card-img-top img-fluid" src="https://image.tmdb.org/t/p/w500{{movie.poster_path}}">
+             <div class="card-block inverse">
+               <p class="card-title">Movie: {{movie.title}}</p>
+               <p class="card-text">Release Date: {{movie.release_date}}</p>
+               <button class="btn btn-danger" (click)="delFavo(item._id)">Delete</button>
+             <button  class="btn btn-info" (click)="EditFavo(item._id)">Edit</button>
              </div>
       </a>
     </div>
   </div>
 </div>
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 col-sm-6 footerleft ">
+        <div class="logofooter"> Address</div>
+        
+        <p><i class="fa fa-map-pin"></i> 210, Aggarwal Tower, Rohini sec 9, New Delhi -        110085, INDIA</p>
+        <p><i class="fa fa-phone"></i> Phone (India) : +91 9999 000 999</p>
+        <p><i class="fa fa-envelope"></i> E-mail : vidushi.sharma1012@gmail.com</p>
+        
+      </div>
+      <div class="col-md-2 col-sm-6 paddingtop-bottom">
+        <h6 class="heading7">GENERAL LINKS</h6>
+        <ul class="footer-ul">
+          <li><a href="#"> Career</a></li>
+          <li><a href="#"> Privacy Policy</a></li>
+          <li><a href="#"> Terms & Conditions</a></li>
+        </ul>
+      </div>
+      
+       
+        <div class=" col-md-6 paddingtop-bottom">
+                    <h6 class="title post ">BEST LANGUAGE GENRE MOVIES</h6>
+                    <ul class="col">
+                        <li>Hindi Comedy Movies | Hindi Action Movies </li>
+                        <li> English Animated Movies | English Fantasy Movies </li>
+                        <li> English Comedy Movies | English Action Movies </li>
+                        <li>Tamil Action Movies | Tamil Comedy Movies </li>
+                        <li>Telugu Action Movies | Gujrati Comedy Movies </li>
+                        <li>Marathi Drama Movies | Marathi Comedy Movies </li>
+                        </ul>
+                </div>
+      </div>
+     </div> 
+</footer>
+<!--footer start from here-->
+
+<div class="copyright">
+  <div class="container">
+    <div class="col-md-6">
+      <p>© 2017 Copyright: vidushi.sharma1012@gmail.com</p>
+    </div>
+   
+  </div>
+</div>
+
+ 
